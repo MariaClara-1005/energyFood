@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de parceiro</title>
+</head>
+<body>
+    <div class="container" > 
+      <img class="logo" src="{% static 'src/logoPrinc.jpg' %}" alt="">
+        <div class="content">      
+            <h2>Bem vindos </h2>
+            <br>
+        </div>
+     
+          <!--FORMULÁRIO DE CADASTRO-->
+          <div id="cadastro">
+            
+            <form method="POST"> {% csrf_token %}
+              
+            <div class="dados_parc">
+              <br>
+              <p> 
+                <label for="user_cad">Usuario</label>
+                <input id="user_cad" name="user_cad" required="required" type="text" placeholder="contato@gmail.com"/> 
+              </p>
+               
+              <p> 
+                <label for="senha_cad">senha</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex.1234"/> 
+              </p>
+            </div>
+            
+              <p> 
+              <div class=" enviar">
+                <input type="submit" value="Entrar"/><br><br>
+                <!--<a class="submit" href="">Entrar</a>-->
+              </p>
+               {{ msg }}
+            </form>
+              <p class="link">  
+                 criar uma conta?
+                <a href="cadastro">Cadastro </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> 
+    
+      <h6>Todos os direitos reservados</h6>
+      <h6><a href="inicio">Sobre nós</a></h6>
+
+</body>
+</html>

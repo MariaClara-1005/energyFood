@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:#f3631a;
+    padding-top: 10px;
+}
+
+.logo {
+    width: 40%;
+    box-shadow: rgba(255, 255, 255, 0.267) 0px 7px 29px 0px;
+}
+
+.carrinho {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h2 {
+    text-align: center;
+    color: #fcfaf9;
+}
+
+.cabecalho-carrinho {
+    display: flex;
+}
+
+.cabecalho-carrinho button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 50%;
+    color: #f3631a;
+    background: #f7f7f7;
+    border: 2px solid #f3631a;
+    border-radius: 8px;
+    transition: .4s;
+
+}
+.carrinho .cabecalho-carrinho button:hover{
+    color: var(--cor-fundo);
+    background:#f3631a;
+    border-color: #f3631a
+}
+
+.cabecalho-carrinho h3 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.carrinho-item {
+    background-color: #e0e0e0;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.carrinho-item .imagem img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.carrinho-item .info {
+    flex-grow: 1;
+}
+
+.carrinho-item .info h4 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.detalhes {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.detalhes .colaborador, .detalhes .status {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.detalhes .colaborador i, .detalhes .status i {
+    margin-right: 5px;
+}
+
+.valor-da-doacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.valor-da-doacao p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.contador i {
+    cursor: pointer;
+    width: 25px;
+    height: 35px;
+    font:0,75rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 35px;
+    background:#f3631a;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+button.pagar {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    color:#f3631a;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.pagar:hover {
+    background-color: #943d12f5;
+}
+
+.voltar {
+    padding: 8px;
+    background-color: #f1f0f0;
+    color: #f76930;
+    box-shadow: rgba(247, 225, 207, 0.4) 5px 5px, rgba(247, 225, 207, 0.3) 10px 10px, rgba(247, 225, 207, 0.2) 15px 15px, rgba(247, 225, 207, 0.1) 20px 20px, rgba(247, 225, 207, 0.05) 25px 25px;
+}
+section {
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;  
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 9999;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .carrinho {
+        padding: 10px;
+    }
+
+    .carrinho-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .carrinho-item .imagem img {
+        margin: 0 0 10px;
+    }
+
+    .detalhes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detalhes .colaborador, .detalhes .status {
+        margin: 5px 0;
+    }
+
+    .valor-da-doacao {
+        flex-direction: column;
+    }
+
+    .valor-da-doacao p {
+        margin-bottom: 10px;
+    }
+
+    .contador {
+        justify-content: center;
+    }
+}

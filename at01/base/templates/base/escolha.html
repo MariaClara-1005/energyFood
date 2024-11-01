@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/escolha.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="opcoes" class="voltar">
+        <i class='bx bx-chevron-left'></i>
+    </a>
+    <section>
+        <br><br>
+        <h2>
+            Colaboradores
+        </h2>
+        <ul>
+            <li class="carrinho-item">
+                <div class="imagem">
+                    <img src="{% static 'src/logoPrinc.jpg' %}" alt="">
+                    <div class="info">
+                        <h4>Colaboradora Jessica</h4>
+                        <div class="detalhes">
+                            <div class="colaborador">
+                                <i class='bx bx-body'></i>
+                                <span>sala 5</span>
+                            </div>
+                            <div class="status">
+                                <i class='bx bx-package'></i>
+                                <span>Disponibilidade <br>
+                                    18:30 as 20:30
+                                </span>
+                            </div>
+                        </div>
+                        <div class="valor-da-doacao">
+                            <p><a href="carrinho">ver Catalogo</a></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+           
+         </ul>
+
+    </section>
+</body>
+</html>

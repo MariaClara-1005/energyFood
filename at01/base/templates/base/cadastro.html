@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de parceiro</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+  </head>
+<body>
+  <!--<a class="voltar" href="./index.html"><i class="fa-solid fa-right-from-bracket"></i></a>-->
+  <br>
+    <div class="container" > 
+      <img class="logo" src="{% static 'src/ETE FOOD.png' %}" alt="FOOD">
+        <div class="content">      
+            <h2>Bem vindos</h2>
+            <br>
+        </div>
+     
+          <!--FORMULÁRIO DE CADASTRO-->
+          <div id="cadastro">
+           
+            <form method="POST"> {% csrf_token %}
+              <h4>Cadastro de parceiro</h4> 
+            </div>
+              
+            <div class="dados_parc">
+              <br>
+              <p> 
+                <label for="nome_cad">Nome Completo</label>
+                <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
+              </p>
+               
+              <p> 
+                <label for="email_cad">Seu e-mail</label>
+                <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@gmail.com"/> 
+              </p>
+
+              <p>
+                <label for="number_cad">Contato</label>  
+                <input id="number_cad>" name="number_cad" required="required" type="number"placeholder="(00)99999-9999"/>
+              </p>
+              <p> 
+                <label for="user_cad">Criar usuario</label>
+                <input id="user_cad" name="user_cad" required="required" type="text" placeholder="ex. ana02"/>
+              </p>
+              <p> 
+                <label for="senha_cad">Criar senha</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234"/>
+              </p>
+            </div>
+            
+              <p> 
+              <div class="enviar">
+                <input type="submit" value="Cadastrar Agora"/><br><br>
+
+
+                </p>
+              </p>
+               
+              <p class="link">  
+                Já tem conta?
+                <a href="/"> Ir para Login </a>
+              </p>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div> 
+    
+</body>
+</html>
